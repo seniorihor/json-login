@@ -7,6 +7,6 @@ def login(login, password)
   login == 'qwerty' && password == '123'
 end
 
-get '/login' do
+post '/login' do
   {auth: login(params[:login], params[:pass])}.to_json
 end
